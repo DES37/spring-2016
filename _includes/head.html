@@ -8,6 +8,10 @@
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
+  {%if page.layout == "example" %}
+     <link rel="stylesheet" href="{{ site.custom_css }}" media="screen">
+  {% endif %}
+    
   {% if page.custom_css %}
     {% for stylesheet in page.custom_css %}
       <link rel="stylesheet" href="{{ stylesheet }}" media="screen">
@@ -17,10 +21,16 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
+  {%if page.layout == "example" %}
+    <script src='{{ site.custom_js }}'></script>
+  {% endif %}
+    
    {% if page.custom_js %}
     {% for js_file in page.custom_js %}
-      <script src='{{ js_file | prepend: site.baseurl }}'></script>
+      <script src='{{ js_file }}'></script>
     {% endfor %}
   {% endif %}
+    
+
 
 </head>

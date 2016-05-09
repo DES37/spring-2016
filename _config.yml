@@ -19,3 +19,5 @@ github_username:  des37
 markdown: kramdown
 kramdown:
   input: GFM
+
+custom_js : /spring2016/static/js/processing.min.js
