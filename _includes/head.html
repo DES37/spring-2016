@@ -8,29 +8,35 @@
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
-  {%if page.layout == "example" %}
-     <link rel="stylesheet" href="{{ site.custom_css }}" media="screen">
-  {% endif %}
-    
-  {% if page.custom_css %}
-    {% for stylesheet in page.custom_css %}
-      <link rel="stylesheet" href="{{ stylesheet }}" media="screen">
-    {% endfor %}
-  {% endif %}
+{% if site.custom_css %}
+  {% for stylesheet in site.custom_css %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen">
+  {% endfor %}
+{% endif %}
+
+{% if page.custom_css %}
+  {% for stylesheet in page.custom_css %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen">
+  {% endfor %}
+{% endif %}
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-  {%if page.layout == "example" %}
-    <script src='{{ site.custom_js }}'></script>
-  {% endif %}
-    
-   {% if page.custom_js %}
-    {% for js_file in page.custom_js %}
-      <script src='{{ js_file }}'></script>
-    {% endfor %}
-  {% endif %}
-    
+{% if site.custom_js %}
+  {% for js_file in site.custom_js %}
+    <script src='{{ js_file }}'></script>
+  {% endfor %}
+{% endif %}
 
+{% if page.custom_js %}
+  {% for js_file in page.custom_js %}
+    <script src='{{ js_file }}'></script>
+  {% endfor %}
+{% endif %}
+
+{% if page.layout == "example" %}
+  <script src='{{ site.processing_js }}'></script>
+{% endif %}
 
 </head>
