@@ -1,11 +1,5 @@
 # DES 37 // Spring 2016
 
-
-## In This Repository
-
-This code contains [examples from class](https://github.com/DES37/spring2016/tree/master/sketches) and [templates and snippets](https://github.com/DES37/spring2016/tree/master/templates) to get you started and to accomplish basic tasks.
-
-
 ## Explore Resources
 
 - [Class Wiki](https://github.com/DES37/spring2016/wiki)
